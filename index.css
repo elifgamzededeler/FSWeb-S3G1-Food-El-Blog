@@ -1,10 +1,19 @@
 /*======= Font rengini #3C373B yapan bir yeni bir universal selector yaratın*/
+:root {
+  --yenirenk: #3c373b;
+  --myblue: #1e90ff;
+  --myblue2: #00bfff;
+  --cornsilk: #fff8dc;
+}
 
 h1 {
-  font-family: "Gaegu", cursive;
-  margin: 20px 0;
+  font-family: "Roboto", italic;
   /*=======  Font size'ı 60px yapın ve text'i ortalayın(center) */
   font-size: 60px;
+  margin: 20px, 0;
+  text-align: center;
+  color: var(--cornsilk);
+  background: var(--myblue);
 }
 
 h2,
@@ -12,39 +21,47 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Gaegu", cursive;
+  font-family: "Roboto", italic;
   margin-bottom: 0;
   padding: 0 10px;
   /*=======  Font size'ı 30px yapın*/
-  font-size: 10px;
+  font-size: 30px;
 }
 
-/*======= Sayfadaki TÜM p tag'leri için aşağıdaki özellikleri içeren bir selector yaratın:
-
-font-size: 16px;
-font-family: roboto;
-padding: 10px;
-line-height: 1.4;
-
-*/
+/*======= Sayfadaki TÜM p tag'leri için aşağıdaki özellikleri içeren bir selector yaratın:*/
+p {
+  font-size: 16px;
+  font-family: roboto;
+  padding: 10px;
+  justify-content: center;
+  line-height: 1.4;
+}
 
 /*======= Sayfadaki TÜM imajlar için aşağıdaki özellikleri içeren bir selector yaratın:
-
-  border-radius: 10px;
-
 */
+img {
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 .content-row {
   display: flex;
 }
 
 .content-row div {
+  margin: 20px;
+
   /*======= margin propery yaratın.  Değerini 20px olarak atayın*/
 }
 
 .container {
   /*======= width property yaratın. Değerini 605px olarak atayın */
   margin: 0 auto;
+  width: 60px;
 }
 
 .container header nav a {
@@ -56,10 +73,13 @@ line-height: 1.4;
   color: white;
   text-decoration: none;
   margin-bottom: 20px;
+  background: #e79947;
   /*======= background property yaratın. Değerini #E79947 olarak atayınız.*/
 }
 
 .container header nav a:hover {
+  background: white;
+  color: var(--myblue2);
   /*======= background property yaratın ve değeri white olsun.  Sonra, color property yaratın ve değerini yapın. */
 }
 
@@ -117,5 +137,6 @@ footer nav a:first-child {
 
 footer .footer-content .copyright {
   padding: 20px 0;
+  text-align: center;
   /*======= metni ortalayacak kodu yazın */
 }
